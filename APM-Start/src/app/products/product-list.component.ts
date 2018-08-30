@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class ProductListComponent {
     // tslint:disable-next-line:no-inferrable-types
     pageTitle: string = 'Product List Up In Here';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
     products: any[] = [
         {
             "productId": 1,

@@ -10,6 +10,7 @@ export class ProductListComponent {
     pageTitle: string = 'Product List Up In Here';
     imageWidth: number = 50;
     imageMargin: number = 2;
+    showImage: boolean = false;
     products: any[] = [
         {
             "productId": 1,
@@ -40,6 +41,20 @@ export class ProductListComponent {
             "price": 8.9,
             "starRating": 4.8,
             "imageUrl": "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
-          }   
+          },
+          {
+            "productId": 17,
+            "productName": "Ninja",
+            "productCode": "NJX-6746",
+            "releaseDate": "May 1, 2018",
+            "description": "Cute ninja",
+            "price": 49.99,
+            "starRating": 4.4,
+            "imageUrl": "http://media.openclipart.org/people/GDJ/50px-1535162072.png"
+          }  
     ];
+
+    toggleImage():void {
+        this.showImage = !this.showImage;
+    }
 }

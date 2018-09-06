@@ -48,5 +48,15 @@
     "price": 35.95,
     "starRating": 4.6,
     "imageUrl": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
-  }
+  },
+  {
+    "productId": 17,
+    "productName": "Ninja",
+    "productCode": "NJX-6746",
+    "releaseDate": "May 1, 2018",
+    "description": "Cute ninja",
+    "price": 49.99,
+    "starRating": 4.4,
+    "imageUrl": "http://media.openclipart.org/people/GDJ/50px-1535162072.png"
+  } 
 ]

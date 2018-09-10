@@ -10,9 +10,9 @@ import { ProductService } from './product.service';
 export class ProductListComponent implements OnInit {
     // tslint:disable-next-line:no-inferrable-types
     pageTitle: string = 'Product List Up In Here';
-    imageWidth: number = 50;
-    imageMargin: number = 2;
-    showImage: boolean = false;
+    imageWidth = 50;
+    imageMargin = 2;
+    showImage = false;
     errorMessage: string;
     _listFilter: string;
 
@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit {
 
     set listFilter(value: string) {
         this._listFilter = value;
-        this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter): this.products;
+        this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
     }
 
     constructor(private productService: ProductService) {}
@@ -37,11 +37,11 @@ export class ProductListComponent implements OnInit {
             product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
     }
 
-    toggleImage():void {
+    toggleImage(): void {
         this.showImage = !this.showImage;
     }
 
-    ngOnInit() : void {
+    ngOnInit(): void {
         this.productService.getProducts().subscribe(
             products => {
                 this.products = products,
@@ -49,10 +49,10 @@ export class ProductListComponent implements OnInit {
             },
 
             error => this.errorMessage = <any>error
-        );        
+        );
     }
 
-    onRatingClicked(message: string) : void {
+    onRatingClicked(message: string): void {
         this.pageTitle = 'Product List: ' + message;
     }
 }

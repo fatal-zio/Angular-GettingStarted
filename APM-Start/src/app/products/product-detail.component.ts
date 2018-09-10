@@ -8,17 +8,17 @@ import { ProductService } from './product.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  pageTitle: string = 'Product Detail';
+  pageTitle = 'Product Detail';
   product: IProduct;
   errorMessage = '';
 
-  constructor(private route: ActivatedRoute, 
+  constructor(private route: ActivatedRoute,
     private router: Router,
     private productService: ProductService) {  }
 
   ngOnInit() {
-    //this plus sign is a casting operator to cast from string to numeric.
-    let param = +this.route.snapshot.paramMap.get('id');
+    // this plus sign is a casting operator to cast from string to numeric.
+    const param = +this.route.snapshot.paramMap.get('id');
     if (param) {
       const id = +param;
       this.getProduct(id);

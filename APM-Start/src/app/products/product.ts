@@ -22,6 +22,6 @@ export class Product implements IProduct {
         public imageUrl: string) {}
 
     calculateDiscount(percent: number): number {
-        return this.price - (this.price * percent /100);
+        return this.price - (this.price * percent / 100);
     }
 }
